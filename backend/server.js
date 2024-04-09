@@ -1,8 +1,16 @@
 const express = require('express');
+const colors = require('colors');
 const { format } = require('path');
-const dotenv = require('dotenv').config();
-const PORT= process.env.PORT || 3000;
+const dotenv = require('dotenv');
+dotenv.config({path: 'backend/.env'});
+//const dotenv = require('dotenv').config();
 const {errorHandler} = require ('./middleware/errorMiddleware')
+const connectDB = require('./config/db')
+const PORT= process.env.PORT || 8080;
+
+
+//connect to db
+connectDB();
 
 //plus tard** var-env
 const app = express();
