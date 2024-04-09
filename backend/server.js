@@ -6,7 +6,8 @@ dotenv.config({path: 'backend/.env'});
 //const dotenv = require('dotenv').config();
 const {errorHandler} = require ('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
-const PORT= process.env.PORT || 8080;
+//const PORT= process.env.PORT || 8080;
+const PORT= 3000;
 
 
 //connect to db
