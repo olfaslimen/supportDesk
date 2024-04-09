@@ -87,7 +87,20 @@ const generateToken = (id)=> {
         expiresIn: '60d',
     })
 }
+
+//@desc   get current user
+//@route  /api/users/me
+//@access private
+
+const getMe =asyncHandler(async(req,res)=>{
+    res.status(200).json({
+        id: req.user.id,
+        email:req.user.email,
+        name: req.user.name
+    });
+})
 module.exports ={
     registerUser,
-    loginUser
+    loginUser,
+    getMe
 }
