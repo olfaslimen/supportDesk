@@ -7,7 +7,7 @@ dotenv.config({path: 'backend/.env'});
 const {errorHandler} = require ('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
 //const PORT= process.env.PORT || 8080;
-const PORT= 3000;
+const PORT= 8000;
 
 
 //connect to db
@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended: false}))
 
 //create route with express
 app.get('/',(req,res)=>{
-    res.send('hello');
+    res.send('hello cv');
 })
 
 //Routes
